@@ -1,6 +1,7 @@
 "use strict";
 let score = 0;
 let randomVar;
+let trialNumber = 1;
 let buttonVal = document.getElementsByTagName("button");
 let result = document.getElementById("result");
 let report = document.getElementById("text-init-loading");
@@ -16,14 +17,18 @@ const Clicked = (e) => {
     result.innerHTML = "You guess it right!";
     score++;
     document.getElementById("text-total-score").innerHTML = score;
+    playSoundSuccess();
   } else {
     result.style.color = "#FF6D2E";
     result.innerHTML = "Sorry, it was a wrong number!";
+    playSoundFailure();
   }
   Array.from(buttonVal).forEach(element => {
     element.disabled = true;
     element.classList.toggle("disabled");
   });
+  trialNumber++;
+  document.getElementById("text-ttrial-number").innerHTML = trialNumber;
 }
 const load = () => {
   report.innerHTML = `<h2>Loading...</h2>
@@ -67,6 +72,16 @@ const addNewRandom = () => {
     });
   }, 10000);
 }
+
+function playSoundSuccess() {
+  var audio = new Audio("./assets/audio/success-1-6297.mp3");
+  audio.play();
+}
+function playSoundFailure() {
+  var audio = new Audio("./assets/audio/negative_beeps-6008.mp3");
+  audio.play();
+}
+
 window.onload = () => {
   load();
   DisplayTime();

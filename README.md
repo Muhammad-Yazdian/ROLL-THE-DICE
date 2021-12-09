@@ -11,9 +11,13 @@
 - A 10 second opportunity to guess the roll.
 - When you click your guess, the roll immediately happens and the result is reported.
 - If the 10 seconds on the roll expires, it simply resets and there is no impact to your score.
+- **Adjusting Screen Size:** If you are on a desktop browser, make sure to set your browser to 'Full Screen Mode' (**F11**)
 
 ## Contribution are Welcomed
 ### Contribution Guidelines for this Project
 1. Read the issues first. Some of them are simple and some are challenging.
 2. Try to fix them and then send a Pull Request (PR).
 3. Create a new issue if it is not already there.
+
+## Resources
+- Audio files from [www.pixabay.com](https://pixabay.com/)
